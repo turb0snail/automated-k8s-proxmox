@@ -1,0 +1,9 @@
+*.img
+*.qcow2
+*.raw
+*.iso
+*.bak
+*.log
+*.swp
+*.tmp
+__pycache__/
