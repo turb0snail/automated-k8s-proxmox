@@ -3,7 +3,7 @@
 
 set -e
 
-echo "[✔] Starting Proxmox VE installation for Debian 11..."
+echo "Starting Proxmox VE installation for Debian 11..."
 
 ### 1. Verify OS ###
 if ! grep -q "bullseye" /etc/os-release; then
