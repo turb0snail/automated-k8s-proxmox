@@ -8,10 +8,27 @@ users:
     sudo: ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
     groups: users, admin
+    lock_passwd: false
+    passwd: $2y$10$tOfmX8pgFqefZ0p6DBLjMe6UJwg/.LYOMUwY.xIrIIJNPth59LQIu
     ssh_authorized_keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMqnrgJss9sO/z8xPbomObHhOV7Uare2kOfjWUMghIB9 proxmox-kube
+
+ssh_pwauth: true
+disable_root: false
+
+chpasswd:
+  list: |
+    kubeadmin:Kube@1234
+  expire: false
+
 package_update: true
 package_upgrade: true
+
+network:
+  version: 2
+  ethernets:
+    ens18:
+      dhcp4: true
 
 write_files:
   - path: /etc/modules-load.d/k8s.conf
