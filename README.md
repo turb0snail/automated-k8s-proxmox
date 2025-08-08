@@ -33,8 +33,6 @@ GCP supports nested virtualization on specific VM types (`n2`, `n2d`, `c2`), all
 
 ```bash
 automated-k8s-proxmox/
-├── assets/
-│   └── jammy-server-cloudimg-amd64.img       # Ubuntu 22.04 cloud image
 ├── cloud-init/
 │   ├── control-plane.yaml                    # Cloud-init config for control plane
 │   └── worker.yaml                           # Cloud-init config for worker nodes
